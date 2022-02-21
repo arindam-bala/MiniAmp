@@ -22,3 +22,15 @@ void setup() {
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
   ina219.begin();
 }
+//------------------------------------------------------
+//Processing-Loop=>
+void loop() {
+  unsigned long currentMillis = millis();
+  if (currentMillis - previousMillis >= interval)
+  {
+    previousMillis = currentMillis;
+    ina219values();
+    displaydata();
+  }
+}
+//-------------------------------------------------------
