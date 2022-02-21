@@ -58,3 +58,12 @@ void displaydata() {
   display.display();
 }
 //---------------------------------------------------------
+//Function for Getting Values from INA219 Sensor
+void ina219values() {
+  shuntvoltage = ina219.getShuntVoltage_mV();
+  busvoltage = ina219.getBusVoltage_V();
+  current_mA = ina219.getCurrent_mA();
+  loadvoltage = busvoltage + (shuntvoltage / 1000);
+  energy = energy + loadvoltage * current_mA / 3600;
+}
+//---------------------------------------------------------
