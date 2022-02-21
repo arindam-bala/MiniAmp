@@ -34,3 +34,27 @@ void loop() {
   }
 }
 //-------------------------------------------------------
+//Function for Display-Data
+void displaydata() {
+  display.clearDisplay();
+  display.setTextColor(WHITE);
+  display.setTextSize(1);
+  display.setCursor(0, 0);
+  display.println(loadvoltage);
+  display.setCursor(35, 0);
+  display.println("V");
+  display.setCursor(50, 0);
+  display.println(current_mA);
+  display.setCursor(95, 0);
+  display.println("mA");
+  display.setCursor(0, 10);
+  display.println(loadvoltage * current_mA);
+  display.setCursor(65, 10);
+  display.println("mW");
+  display.setCursor(0, 20);
+  display.println(energy);
+  display.setCursor(65, 20);
+  display.println("mWh");
+  display.display();
+}
+//---------------------------------------------------------
