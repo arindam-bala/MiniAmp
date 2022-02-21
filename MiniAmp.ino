@@ -17,3 +17,8 @@ float current_mA = 0;
 float loadvoltage = 0;
 float energy = 0;
 //-----------------------------------------------------
+//System-Setup=>
+void setup() {
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  ina219.begin();
+}
