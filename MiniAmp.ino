@@ -19,7 +19,7 @@ float energy = 0;
 //-----------------------------------------------------
 //System-Setup=>
 void setup() {
-  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3D);
   ina219.begin();
 }
 //------------------------------------------------------
