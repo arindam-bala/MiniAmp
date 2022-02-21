@@ -8,3 +8,12 @@
 Adafruit_SSD1306 display(OLED_RESET);
 Adafruit_INA219 ina219;
 //-----------------------------------------------------
+//Global Variables=>
+unsigned long previousMillis = 0;
+unsigned long interval = 100;
+float shuntvoltage = 0;
+float busvoltage = 0;
+float current_mA = 0;
+float loadvoltage = 0;
+float energy = 0;
+//-----------------------------------------------------
